@@ -7,7 +7,7 @@ class DbConn
 {
     public static function getConnection()
     {
-        $paramsPath = "Setup/db_params.php";
+        $paramsPath = 'D:\OpenServ\OSPanel\domains\tlgbot.ru\Setup\db_params.php';
         $params = include($paramsPath);
 
         $dsn = "mysql:host={$params['host']};dbname={$params['dbname']}";
