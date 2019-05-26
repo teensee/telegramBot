@@ -4,7 +4,7 @@ namespace Reminder;
 
 use BotClient\DataWorker;
 
-class Reminder
+class MysqlReminder
 {
     public static function selectUniqueRecord()
     {
