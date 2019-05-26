@@ -33,10 +33,10 @@ return array(
 ### hook.php
 Данный файл отвечает за обработку сообщений от api.telegram
 Для регистрации Webhook'a используйте метод registerWebhook() класса TelegramClient
-```В конструктор нужно передать путь до файла hook.php```
+```В конструктор нужно передать константы из файла settings.php```
 
 ```php
-$client = new TelegramClient('token', 'hook.php');
+$client = new TelegramClient(TOKEN, HOOK_URL);
 $client->registerWebhook();
 ```
 
@@ -79,3 +79,8 @@ include('path to BitrixReminder.php');
 getUniqueRecordFromBitrix(int $infoBlockId)
 ```
 Она возвращает запись из инфоблока,ID которого передается через параметр функции.
+
+
+
+
+
