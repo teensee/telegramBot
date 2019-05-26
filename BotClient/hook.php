@@ -2,10 +2,10 @@
 
 use BotClient\DataWorker;
 use BotClient\TelegramClient;
+use Jokes\Joker;
 
 require_once "../vendor/autoload.php";
 include '../Setup/settings.php';
-include '../Setup/Joker.php';
 
 $updates = json_decode(file_get_contents('php://input'), JSON_OBJECT_AS_ARRAY);
 
@@ -13,7 +13,9 @@ $client = new TelegramClient(TOKEN, BASE_URL);
 
 $message = $updates['message']['text'];
 $chat_id = $updates['message']['chat']['id'];
-$user_name = $updates['message']['from']['username'];
+$updates['message']['from']['username'] == null ?
+    $user_name = $updates['message']['from']['first_name']
+    :$user_name =$updates['message']['from']['username'];
 
 try {
     switch ($message) {

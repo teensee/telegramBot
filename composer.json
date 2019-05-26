@@ -1,0 +1,13 @@
+{
+    "require": {
+       "ext-json": "*",
+       "ext-pdo": "*"
+    },
+  "autoload": {
+    "psr-4": {
+      "BotClient\\" : "BotClient/",
+      "Reminder\\" : "Reminder/",
+      "Jokes\\" : "Setup/"
+    }
+  }
+}

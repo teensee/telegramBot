@@ -1,5 +1,6 @@
 <?php
 
+namespace Jokes;
 class Joker
 {
     public static function getRandomFact()
